@@ -60,6 +60,15 @@ Instructions for creating a digital ocean Ubuntu droplet can be found <a href="h
 
 	`ssh -i [privateKeyFilename] grader@178.128.5.133`
 
+## Disable Password Authentication and Root login
+1. Run `sudo nano /etc/ssh/sshd_config`
+2. Find the line that specifies PasswordAuthentication, uncomment it by deleting the preceding #, then change its value to "no".
+3. Find the line that specifies PermitRootLogin and set it's value to "no".
+3. Type this to reload the SSH daemon: `sudo systemctl reload sshd`
+
+Resource https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-16-04
+
+
 ## Update all currently installed packages
 
 	sudo apt-get update
