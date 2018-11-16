@@ -10,7 +10,7 @@ The purpose of this project was to take a baseline installation of Ubuntu and co
 
 The application source code can be found <a href="https://github.com/louismagdaleno/fsnd-flask-social-network"><strong>here</strong></a>.
 
-The deployed application can be accessed at <strong>http://louismagdaleno.com</strong>.
+The deployed application can be accessed at <strong>https://louismagdaleno.com</strong>.
 
 The public IP address of the server is <strong>54.158.49.179</strong>.
 
@@ -29,7 +29,7 @@ Instructions for creating a digital ocean Ubuntu droplet can be found <a href="h
 1. Run the command `ssh-keygen` on your local machine to generate a key pair.
 
 ## Connect to the server
-2. Run the command `ssh root@178.128.129.253` to connect to the server. You will be prompted for the root password, which was sent via email by digital ocean.
+2. Run the command `ssh ubuntu@54.158.49.179 to connect to the server. You will be prompted for the root password, which was sent via email by digital ocean.
 
 
 
@@ -60,7 +60,7 @@ Instructions for creating a digital ocean Ubuntu droplet can be found <a href="h
 3. reload SSH using `service ssh restart`
 4. now you can use ssh to login with the new user you created
 
-	`ssh -i [privateKeyFilename] grader@louismagdaleno.com`
+	`ssh -i [privateKeyFilename] grader@louismagdaleno.com -p 2200`
 
 ## Disable Password Authentication and Root login
 1. Run `sudo nano /etc/ssh/sshd_config`
@@ -120,7 +120,6 @@ Configure the Uncomplicated Firewall (UFW) to only allow incoming connections fo
 	<VirtualHost *:80>
 		ServerName louismagdaleno.com
 		ServerAdmin admin@louismagdaleno.com
-		ServerAlias ec2-54-158-49-179.compute-1.amazonaws.com
 		WSGIScriptAlias / /var/www/socialnetwork/socialnetwork.wsgi
 		<Directory /var/www/socialnetwork/socialnetwork/>
 			Order allow,deny
