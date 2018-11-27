@@ -3,6 +3,7 @@
 <a href="https://www.udacity.com/">
   <img src="https://s3-us-west-1.amazonaws.com/udacity-content/rebrand/svg/logo.min.svg" width="300" alt="Udacity logo svg">
 </a> 
+<a href="https://lambdaschool.com/"><img src="https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/4578/s300/untitled.png"></a>
 
 # Linux Server Configuration
 
